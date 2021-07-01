@@ -18,11 +18,11 @@ const initialState: IEXBlockSliceInitalState = {
   blocks: [
     {
       blockType: 'ticker',
-      symbol: 'twtr'
+      symbol: 'amc'
     },
     {
       blockType: 'book',
-      symbol: 'twtr'
+      symbol: 'amc'
     },
     {
       blockType: 'empty',
