@@ -1,0 +1,109 @@
+.iex_block_selector {
+  display: flex;
+  flex: 1;
+  border: 4px dashed #3caea3;
+  border-radius: 2px;
+  justify-content: center;
+  aspect-ratio: 1;
+
+  &__add_button {
+    display: block;
+    width: 64px;
+    height: 64px;
+    align-self: center;
+    font-size: 48px;
+    color: #3caea3;
+    cursor: pointer;
+    border-radius: 64px;
+    border: 4px #3caea3 solid;
+    background-color: #173f5f;
+
+    &:hover {
+      background-color: #194569;
+    }
+
+    &:focus {
+      color: #173f5f;
+      background-color: #3caea3;
+    }
+  }
+
+  &__selection_list {
+    align-self: center;
+    border-radius: 16px;
+    border: 2px solid #3caea3;
+    padding: 8px;
+    &__header {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 6px;
+    }
+    &__close_button {
+      border-style: none;
+      font-weight: bold;
+      border-radius: 12px;
+      font-size: 16px;
+      color: white;
+      line-height: 20px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+    &__items {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      &__item {
+        font-size: 18px;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          overflow: hidden;
+          padding: 4px;
+          .arrow_container {
+            display: flex;
+            overflow: hidden;
+            margin-left: 8px;
+
+            .arrow {
+              transition: all 0.5s;
+              opacity: 0;
+              align-self: center;
+              transform: translateX(-100%);
+            }
+          }
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            .arrow_container {
+              .arrow {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+          }
+        }
+      }
+    }
+    &__symbol {
+      display: flex;
+      align-items: center;
+      .arrow {
+        cursor: pointer;
+      }
+    }
+    &__symbol_input {
+      font-size: 18px;
+      border-style: none;
+      outline: none;
+      background-color: #173f5f;
+      color: white;
+      border-bottom: 1px solid #3caea3;
+      margin: 2px;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.25);
+      }
+    }
+  }
+}
